@@ -9,15 +9,29 @@ class Insertion_Sort_Tests {
 
     @Test
     void testEmptyListReturnsEmptyList() {
-        ArrayList<Integer> emptyList = new ArrayList<Integer>();
+        ArrayList<Character> emptyList = new ArrayList<Character>();
         assertEquals(emptyList, sort.performInsertionSort(emptyList));
     }
     
     @Test
     void testListOfLengthOneReturnsSameList() {
-        ArrayList<Integer> listOfOne = new ArrayList<Integer>();
-        listOfOne.add(100);
+        ArrayList<Character> listOfOne = new ArrayList<Character>();
+        listOfOne.add('A');
         assertEquals(listOfOne, sort.performInsertionSort(listOfOne));
+    }
+    
+    @Test
+    void testListOfTwoReturnsSortedList() {
+        ArrayList<Character> listOfTwo = new ArrayList<Character>();
+        listOfTwo.add('B');
+        listOfTwo.add('A');
+        
+        ArrayList<Character> expected = new ArrayList<Character>();
+        expected.add('A');
+        expected.add('B');
+        
+        ArrayList<Character> actual = sort.performInsertionSort(listOfTwo);
+        assertEquals(expected, actual);
     }
 
 }

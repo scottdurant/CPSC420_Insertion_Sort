@@ -8,10 +8,24 @@ public class Insertion_Sort {
     
     
     
-    // Accepts an arraylist of integers, returns 
-    // the sorted arraylist using insertion sort
-    public ArrayList<Integer> performInsertionSort(ArrayList<Integer> originalList){
-        return originalList;
+    
+    
+    /**
+     * @todo: print out the list at each iteration
+     * Accepst an arraylist and returns it sorted using insertion sort.
+     * Follows the psuedo code from class
+     */
+    public ArrayList<Character> performInsertionSort(ArrayList<Character> list){
+        int n = list.size();
+        for (int i = 1; i < n; i++) {
+            Character v = list.get(i);
+            int j = i - 1;
+            while ((j >= 0) && (list.get(j).compareTo(v) > 0)) {
+                list.set(j+1, list.get(j));
+                j--;
+            }
+            list.set(j+1, v);
+        }
+        return list;
     }
-
 }
