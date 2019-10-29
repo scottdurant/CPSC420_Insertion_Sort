@@ -12,5 +12,12 @@ class Insertion_Sort_Tests {
         ArrayList<Integer> emptyList = new ArrayList<Integer>();
         assertEquals(emptyList, sort.performInsertionSort(emptyList));
     }
+    
+    @Test
+    void testListOfLengthOneReturnsSameList() {
+        ArrayList<Integer> listOfOne = new ArrayList<Integer>();
+        listOfOne.add(100);
+        assertEquals(listOfOne, sort.performInsertionSort(listOfOne));
+    }
 
 }
