@@ -17,6 +17,9 @@ public class Insertion_Sort {
      */
     public ArrayList<Character> performInsertionSort(ArrayList<Character> list){
         int n = list.size();
+        System.out.println("Original List:" + list);
+        System.out.println("Size = " + n);
+        
         for (int i = 1; i < n; i++) {
             Character v = list.get(i);
             int j = i - 1;
@@ -25,6 +28,7 @@ public class Insertion_Sort {
                 j--;
             }
             list.set(j+1, v);
+            System.out.println("List after iteration " + i + ": " + list);
         }
         return list;
     }

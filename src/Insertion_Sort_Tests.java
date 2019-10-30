@@ -33,5 +33,32 @@ class Insertion_Sort_Tests {
         ArrayList<Character> actual = sort.performInsertionSort(listOfTwo);
         assertEquals(expected, actual);
     }
+    
+    @Test
+    void testSortExample() {
+        ArrayList<Character> exampleList = new ArrayList<Character>();
+        exampleList.add('E');
+        exampleList.add('X');
+        exampleList.add('A');
+        exampleList.add('M');
+        exampleList.add('P');
+        exampleList.add('L');
+        exampleList.add('E');
+        
+        
+        
+        ArrayList<Character> expected = new ArrayList<Character>();
+        expected.add('A');
+        expected.add('E');
+        expected.add('E');
+        expected.add('L');
+        expected.add('M');
+        expected.add('P');
+        expected.add('X');
+        
+        
+        ArrayList<Character> actual = sort.performInsertionSort(exampleList);
+        assertEquals(expected, actual);
+    }
 
 }
