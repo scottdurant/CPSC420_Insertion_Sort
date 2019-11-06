@@ -1,2 +1,2 @@
 # CPSC420_Insertion_Sort
-This is for my Algorithms class project. I am making some random changes
+This is an implementation of insertion sort for my Algorithms class project.
