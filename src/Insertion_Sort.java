@@ -1,23 +1,35 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
-public class Insertion_Sort {
-
+public class Insertion_Sort { 
     
-    
-    ////////////////// USE DEVELOP BRANCH //////////////////////////////////////
-    
+    public static void main(String[] args) {
+        Scanner scnr = new Scanner(System.in);
+        System.out.println("Enter characters to sort, no spaces: ");
+        String userInput = scnr.nextLine();
+        scnr.close();
+        
+        ArrayList<Character> listToSort = new ArrayList<Character>();
+        
+        for (int i=0; i<userInput.length(); i++) {
+            listToSort.add(userInput.charAt(i));
+        }
+        
+        System.out.println("Sorting list: " + listToSort);
+        ArrayList<Character> sortedList = new ArrayList<Character>();
+        sortedList = performInsertionSort(listToSort);
+        System.out.println("Sorted list: " + sortedList);
+    }
     
     
     
     
     /**
-     * @todo: print out the list at each iteration
-     * Accepst an arraylist and returns it sorted using insertion sort.
+     * Accepts an arraylist and returns it sorted using insertion sort.
      * Follows the psuedo code from class
      */
-    public ArrayList<Character> performInsertionSort(ArrayList<Character> list){
+    public static ArrayList<Character> performInsertionSort(ArrayList<Character> list){
         int n = list.size();
-        System.out.println("Original List:" + list);
         System.out.println("Size = " + n);
         
         for (int i = 1; i < n; i++) {
